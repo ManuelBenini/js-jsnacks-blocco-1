@@ -6,3 +6,20 @@
  la funzione prompt restituisca una stringa anche se si è digitato un numero
  e recuperare una cifra alla volta usanto il ciclo for per scorrere la stringa numerica
 */
+
+const numeroUtente = prompt('Inserire numero');
+const arrayNumeri = [];
+let sommaCifre = 0;
+
+for(let i = 1; i <= numeroUtente.length; i++){
+  arrayNumeri.push(numeroUtente.substring(i, i - 1));
+  console.log(arrayNumeri);
+}
+
+for(let i = 0; i < arrayNumeri.length; i++){
+  sommaCifre = sommaCifre + parseInt(arrayNumeri[i]);
+  console.log('numeri presi dall\'array', arrayNumeri[i]);
+  console.log('Somma totale --->', sommaCifre);
+}
+
+document.getElementById('somma').append(sommaCifre)
