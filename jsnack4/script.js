@@ -9,8 +9,13 @@ let nomeUtente;
 let flagInvito = false;
 
 while(flagInvito === false){
-  nomeUtente = prompt('Inserire il proprio nome');
+  nomeUtente = prompt('Inserire il proprio nome').toLowerCase();
 
+  while(!isNaN(nomeUtente)){
+    alert("Non sono state inserite delle lettere, riprovare")
+    nomeUtente = prompt('Inserire il proprio nome');
+  }
+  
   for(let i = 0; i < arrayInvitati.length; i++){
     if(nomeUtente === arrayInvitati[i]){
       flagInvito = true;
