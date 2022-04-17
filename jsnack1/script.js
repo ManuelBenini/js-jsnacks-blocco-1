@@ -10,7 +10,7 @@ let secondNumberFlag = false;
 while(firstNumberFlag === false){
   firstNumber = prompt('Inserisci il primo numero');
 
-  if(!isNaN(firstNumber) && Boolean(firstNumber)){
+  if(!isNaN(firstNumber) && Boolean(firstNumber)){ //Oppure solo firstNumber
     firstNumberFlag = true
   }else{
     firstNumberFlag = false;
@@ -26,7 +26,7 @@ while(firstNumberFlag === false){
 while(secondNumberFlag === false){
   secondNumber = prompt('Inserisci il secondo numero');
 
-  if(!isNaN(secondNumber) && Boolean(secondNumber)){
+  if(!isNaN(secondNumber) && Boolean(secondNumber)){ //Oppure solo secondNumber
     secondNumberFlag = true
   }else{
     secondNumberFlag = false;
