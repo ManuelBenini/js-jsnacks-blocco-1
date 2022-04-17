@@ -25,9 +25,6 @@ normalBtn.addEventListener('click' , function(){
 })
 
 
-
-
-
 // EXTRA -- Calcolo con formula ridotta
 
 const formulaBtn = document.getElementById('somma_formula');
@@ -35,8 +32,18 @@ const formulaBtn = document.getElementById('somma_formula');
 formulaBtn.addEventListener('click' , function(){
 
   let primoNumero = parseInt(prompt('Inserisci il primo numero di un intervallo di cui verranno sommati tutti i numeri'));
+  
+  while(isNaN(primoNumero)){
+    alert('Non hai inserito un numero, riprova')
+    primoNumero = parseInt(prompt('Inserisci il primo numero di un intervallo di cui verranno sommati tutti i numeri'));
+  }
 
   let secondoNumero = parseInt(prompt('Inserisci il secondo numero'));
+
+  while(isNaN(secondoNumero)){
+    alert('Non hai inserito un numero, riprova')
+    secondoNumero = parseInt(prompt('Inserisci il secondo numero'));
+  }
 
   let valorePrimoNumero;
 
