@@ -7,6 +7,40 @@ let secondNumber;
 let firstNumberFlag = false;
 let secondNumberFlag = false;
 
+while(firstNumberFlag === false){
+  firstNumber = prompt('Inserisci il primo numero');
+
+  if(!isNaN(firstNumber) && Boolean(firstNumber)){
+    firstNumberFlag = true
+  }else{
+    firstNumberFlag = false;
+  }
+  console.log('First number', firstNumberFlag , '----->>', firstNumber);
+
+  if(firstNumberFlag === false){
+    alert('Non hai inserito un numero, riprovare');
+  }
+  
+}
+
+while(secondNumberFlag === false){
+  secondNumber = prompt('Inserisci il secondo numero');
+
+  if(!isNaN(secondNumber) && Boolean(secondNumber)){
+    secondNumberFlag = true
+  }else{
+    secondNumberFlag = false;
+  }
+  console.log('Second number', secondNumberFlag , '----->>', secondNumber);
+
+  if(secondNumberFlag === false){
+    alert('Non hai inserito un numero, riprovare');
+  }
+
+}
+
+/*
+OPPURE
 while(firstNumberFlag === false || secondNumberFlag === false){
   firstNumber = prompt('Inserisci il primo numero');
   secondNumber = prompt('Inserisci il secondo numero');
@@ -32,8 +66,8 @@ while(firstNumberFlag === false || secondNumberFlag === false){
   }else if(firstNumberFlag === false && secondNumberFlag === false){
     alert('Non hai inserito un numero in nessun caso, riprovare');
   }
-  
 }
+*/
 
 console.log('I numeri inseriti sono corretti!')
 
