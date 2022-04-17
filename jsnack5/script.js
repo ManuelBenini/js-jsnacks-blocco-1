@@ -8,7 +8,13 @@
 const array = [];
 
 for(let i = 0; i < 6; i++){
-  const userNumber = parseInt(prompt('Inserire un numero'))
+  let userNumber = parseInt(prompt('Inserire un numero'));
+
+  while(isNaN(userNumber)){
+    alert('Non è stato inserito un numero, riprovare');
+    userNumber = parseInt(prompt('Inserire un numero'));
+  }
+
   if(userNumber % 2){
     array.push(userNumber)
   }
