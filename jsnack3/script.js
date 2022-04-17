@@ -11,10 +11,10 @@ const forCycleBtn = document.getElementById('forcycle');
 
 forCycleBtn.addEventListener('click' , function(){
   let somma = 0;
+  let numeriUtente;
   
   for(let i = 0; i < 5; i++){
-  
-    let numeriUtente = parseInt(prompt('Inserire numero'));
+    numeriUtente = parseInt(prompt('Inserire numero'));
     somma = parseInt(somma + numeriUtente);
     console.log(numeriUtente);
   }
@@ -25,7 +25,7 @@ forCycleBtn.addEventListener('click' , function(){
 })
 
 
-// ESERCIZIO CON WHILE
+// ESERCIZIO CON WHILE E CONTROLLI
 const whileCycleBtn = document.getElementById('whilecycle');
 
 whileCycleBtn.addEventListener('click' , function(){
@@ -37,6 +37,14 @@ whileCycleBtn.addEventListener('click' , function(){
   
     contatore++;
     let numeriUtente = parseInt(prompt('Inserire numero'));
+
+    while (isNaN(numeriUtente)){
+      if(isNaN(numeriUtente)){
+        alert('Non hai inserito un numero, riprovare')
+        numeriUtente = parseInt(prompt('Inserire numero'));
+      }
+    }
+
     somma = parseInt(somma + numeriUtente);
     console.log(numeriUtente);
   }
