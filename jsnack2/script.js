@@ -9,32 +9,36 @@ let secondaParola;
 let primaParolaFlag = false;
 let secondaParolaFlag = false;
 
-while(primaParolaFlag === false || secondaParolaFlag === false){
+while(primaParolaFlag === false){
   primaParola = prompt('Inserisci la prima parola');
+
+  if(isNaN(primaParola) && Boolean(primaParola)){ //Oppure solo primaParola
+    primaParolaFlag = true;
+  }else{
+    primaParolaFlag = false;
+  }
+  console.log('Prima parola', primaParolaFlag , '----->>', primaParola);
+
+  if(primaParolaFlag === false){
+    alert('Non hai inserito una parola, riprovare');
+  }
+  
+}
+
+while(secondaParolaFlag === false){
   secondaParola = prompt('Inserisci la seconda parola');
 
-  if(!isNaN(primaParola)){
-    primaParolaFlag = false
-  }else{
-    primaParolaFlag = true;
-  }
-  console.log('prima parola', primaParolaFlag , '----->>', primaParola);
-  
-  if(!isNaN(secondaParola)){
-    secondaParolaFlag = false
-  }else{
+  if(isNaN(secondaParola) && Boolean(secondaParola)){ //Oppure solo secondaParola
     secondaParolaFlag = true;
+  }else{
+    secondaParolaFlag = false;
   }
-  console.log('seconda parola', secondaParolaFlag , '----->>', secondaParola);;
+  console.log('Seconda parola', secondaParolaFlag , '----->>', secondaParola);
 
-  if(primaParolaFlag === false && secondaParolaFlag === true){
-    alert('Non hai inserito una parola nel primo caso, riprovare');
-  }else if(primaParolaFlag === true && secondaParolaFlag === false){
-    alert('Non hai inserito una parola nel secondo caso, riprovare');
-  }else if(primaParolaFlag === false && secondaParolaFlag === false){
-    alert('Non hai inserito una parola in nessun caso, riprovare');
+  if(secondaParolaFlag === false){
+    alert('Non hai inserito una parola, riprovare');
   }
-  
+
 }
 console.log('Le parole inserite sono corrette!')
 
