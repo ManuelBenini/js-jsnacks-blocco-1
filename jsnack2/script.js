@@ -10,7 +10,7 @@ let primaParolaFlag = false;
 let secondaParolaFlag = false;
 
 while(primaParolaFlag === false){
-  primaParola = prompt('Inserisci la prima parola');
+  primaParola = prompt('Inserisci la prima parola').trim();
 
   if(isNaN(primaParola) && Boolean(primaParola)){ //Oppure solo primaParola
     primaParolaFlag = true;
@@ -26,7 +26,7 @@ while(primaParolaFlag === false){
 }
 
 while(secondaParolaFlag === false){
-  secondaParola = prompt('Inserisci la seconda parola');
+  secondaParola = prompt('Inserisci la seconda parola').trim();
 
   if(isNaN(secondaParola) && Boolean(secondaParola)){ //Oppure solo secondaParola
     secondaParolaFlag = true;
